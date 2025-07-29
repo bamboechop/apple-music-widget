@@ -44,6 +44,7 @@ function connectws() {
 				// Song changes
 				case ("playbackStatus.nowPlayingItemDidChange"):
 					UpdateSongInfo(data);
+					UpdatePlaybackState({ state: "playing" });
 					break;
 
 				// Progress bar moves
